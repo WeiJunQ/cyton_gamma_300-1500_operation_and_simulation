@@ -1,4 +1,4 @@
-# Cyton_gamma_simulation
+# cyton_gamma_simulation
 simulation for cyton gamma 1500 with moveit motion planning
 
 Includes hardware drivers for the dynamixel motors 
