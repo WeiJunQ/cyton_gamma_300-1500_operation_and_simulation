@@ -17,4 +17,8 @@ Syntax for hardware:
 
 
 Syntax for Simulation: 
+> roslaunch cyton_gamma_pkg simulation_gamma_1500.launch 
 
+This will start up the moveit client with RVIZ command center and simulation output in physics simulator (Gazebo was chosen for this application) 
+
+Note: The collision boundaries are pretty much destroyed. I haven't had time to fixing them yet, if the end effector's angle is angled downwards to close to the ground, robot may jump. Consider rviz to visualize these issues. 
