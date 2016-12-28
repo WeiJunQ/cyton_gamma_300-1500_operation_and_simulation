@@ -1,5 +1,5 @@
 # cyton_gamma_simulation
-simulation for cyton gamma 1500 with moveit motion planning
+simulation for cyton gamma 1500 and 300 with MoveIt and OMPL
 
 Includes hardware drivers for the dynamixel motors 
 
@@ -8,17 +8,19 @@ Syntax for hardware:
 
 > roslaunch cyton_controllers start_controller.launch
 
-> catkin_ws/src/standup.sh
-
 > rosrun cyton_controllers dynamixel_joint_state_publisher.py
 
-> roslaunch cyton_gamma_1500_moveit_config moveit_planning_execution.launch
+> roslaunch cyton_gamma_[1500 or 300]_moveit_config moveit_planning_execution.launch
 
-
+> python command_front_end.py
 
 Syntax for Simulation: 
-> roslaunch cyton_gamma_pkg simulation_gamma_1500.launch 
+> roslaunch cyton_gamma_pkg simulation_gamma_[1500 or 300].launch 
 
 This will start up the moveit client with RVIZ command center and simulation output in physics simulator (Gazebo was chosen for this application) 
 
-Note: The collision boundaries are pretty much destroyed. I haven't had time to fixing them yet, if the end effector's angle is angled downwards to close to the ground, robot may jump. Consider rviz to visualize these issues. 
+These have been tested and allow cartesian, joint space, and force control. The gripper action controller is directly commanded since the internal dynamixel controllers do a fine job on a single axis joint. 
+
+> standup.sh
+
+This script will move the robot to a zero position. It's convenient for testing purposes and the same syntax can be used to command the robot directly with rostopic pub. 
