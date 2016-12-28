@@ -1,0 +1,15 @@
+#!/bin/bash
+
+roslaunch cyton_controllers controller_manager.launch 
+
+sleep .5
+
+roslaunch cyton_controllers start_controllers.launch
+
+sleep .5
+
+rosrun cyton_controllers dynamixel_joint_state_publisher.py
+
+sleep 1
+
+python /home/rdtinern/catkin_ws/src/cyton_gamma_pkg/src/test_plan.py

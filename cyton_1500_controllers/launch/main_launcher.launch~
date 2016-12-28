@@ -1,0 +1,9 @@
+<launch>
+
+  <include file="$(find cyton_controllers)/launch/controller_manager.launch"/>
+
+  <include file="$(find cyton_controllers)/launch/start_controller.launch"/>
+
+
+
+</launch>
