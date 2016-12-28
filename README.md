@@ -10,9 +10,9 @@ Syntax for hardware:
 
 > rosrun cyton_controllers dynamixel_joint_state_publisher.py
 
-> roslaunch cyton_gamma_[1500 or 300]_moveit_config moveit_planning_execution.launch
+> roslaunch cyton_gamma_[1500 or 300]_moveit_config moveit_planning_execution.launch 2>/dev/null
 
-> python command_front_end.py
+> python command_front_end.py 2>/dev/null
 
 Syntax for Simulation: 
 > roslaunch cyton_gamma_pkg simulation_gamma_[1500 or 300].launch 
