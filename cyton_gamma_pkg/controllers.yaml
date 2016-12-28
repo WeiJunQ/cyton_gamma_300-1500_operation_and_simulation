@@ -9,9 +9,4 @@ cyton_joint_trajectory_action_controller:
     - wrist_pitch_joint
     - wrist_roll_joint
 
-andras_gripper_planning_group_controller:
-  type: "position_controllers/JointTrajectoryController"
-  joints:
-    - gripper_joint
-
 

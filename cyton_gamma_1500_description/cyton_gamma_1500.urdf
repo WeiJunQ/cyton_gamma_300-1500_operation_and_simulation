@@ -30,18 +30,18 @@
         <mesh filename="package://cyton_gamma_1500_description/meshes/base.dae"/>
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0 0.0115 0.047"/>
-      <geometry>
-        <box size="0.154 0.177 0.094"/>
-      </geometry>
-    </collision>
     <inertial>
       <mass value="100.0"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <inertia ixx="1.1027" iyy="1.1027" izz="1.1027"
                 ixy="0" ixz="0" iyz="0"/>
     </inertial>
+    <collision>
+      <origin xyz="0 0.0115 0.047"/>
+      <geometry>
+        <box size="0.154 0.177 0.094"/>
+      </geometry>
+    </collision>
   </link>
 
 <!-- shoulder roll -->
@@ -61,12 +61,7 @@
         <mesh filename="package://cyton_gamma_1500_description/meshes/shoulder_roll.dae"/>
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0.0 0.069 0.0587"/>
-      <geometry>
-        <box size="0.09829 0.18143 0.08392"/>
-      </geometry>
-    </collision>
+
     <inertial>
       <mass value="50.0"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -102,12 +97,7 @@
         <mesh filename="package://cyton_gamma_1500_description/meshes/shoulder_pitch.dae"/>
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="-0.001 0.064 0.1745"/>
-      <geometry>
-        <box size="0.0709 0.19363 0.083"/>
-      </geometry>
-    </collision>
+
     <inertial>
       <mass value="20.0"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -143,12 +133,7 @@
         <mesh filename="package://cyton_gamma_1500_description/meshes/shoulder_yaw.dae"/>
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="-0.0225 0.039 0.3068"/>
-      <geometry>
-        <box size="0.0717 0.1846 0.0756"/>
-      </geometry>
-    </collision>
+
     <inertial>
       <mass value="10.0"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -184,12 +169,7 @@
         <mesh filename="package://cyton_gamma_1500_description/meshes/elbow_pitch.dae"/>
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0.0346 0.0461 0.4228"/>
-      <geometry>
-        <box size="0.0549 0.1557 0.076"/>
-      </geometry>
-    </collision>
+
     <inertial>
       <mass value="10.0"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -225,12 +205,7 @@
         <mesh filename="package://cyton_gamma_1500_description/meshes/elbow_yaw.dae"/>
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0.0172 0.0209 0.516"/>
-      <geometry>
-        <box size="0.0535 0.1160 0.0402"/>
-      </geometry>
-    </collision>
+
     <inertial>
       <mass value="10.0"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -256,7 +231,7 @@
     <child link="wrist_pitch"/>
     <origin rpy="0 0 0" xyz="0.02626 0.018 0.0718"/>
     <limit effort="100.0" lower="-1.8326" upper="1.8326" velocity="1.0"/>
-    <axis xyz="-1 0 0"/>
+    <axis xyz="1 0 0"/>
   </joint>
 
   <link name="wrist_pitch">
@@ -266,12 +241,7 @@
         <mesh filename="package://cyton_gamma_1500_description/meshes/wrist_pitch.dae"/>
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="0.0257 0.0118 0.5617"/>
-      <geometry>
-        <box size="0.026 0.0435 0.05185"/>
-      </geometry>
-    </collision>
+
     <inertial>
       <mass value="10.0"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -307,12 +277,7 @@
         <mesh filename="package://cyton_gamma_1500_description/meshes/wrist_roll.dae"/>
       </geometry>
     </visual>
-    <collision>
-      <origin xyz="-0.0063 -0.0014 0.6102"/>
-      <geometry>
-        <box size="0.0518 0.0723 0.1004"/>
-      </geometry>
-    </collision>
+
     <inertial>
       <mass value="10.0"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -331,86 +296,6 @@
     </actuator>
   </transmission>
 
-  <!--  gripper  stuff  -->
-
-  <joint name="gripper_joint" type="prismatic">
-    <parent link="wrist_roll"/>
-    <child link="gripper_finger1"/>
-    <origin rpy="0 0 0" xyz="-0.01331 0.00485 0.077225"/>
-    <limit effort="100.0" lower="-0.008" upper="0.008" velocity="1.0"/>
-    <axis xyz="1 0 0"/>
-  </joint>
-
-  <link name="gripper_finger1">
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://cyton_gamma_1500_description/meshes/gripper_finger1.dae"/>
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="-0.0167 0.0172 0.7254"/>
-      <geometry>
-        <box size="0.015 0.0229 0.0475"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <mass value="1.0"/>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx=".0027" iyy=".0027" izz=".0027"
-                ixy="0" ixz="0" iyz="0"/>
-    </inertial>
-  </link>
-
-  <transmission name="tran8">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="gripper_joint">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="motor8">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-    </actuator>
-  </transmission>
-
-  <joint name="gripper_joint2" type="prismatic">
-    <parent link="wrist_roll"/>
-    <child link="gripper_finger2"/>
-    <origin rpy="0 0 0" xyz="0.0098 0.00485 0.077225"/>
-    <limit effort="100.0" lower="-0.008" upper="0.008" velocity="1.0"/>
-    <mimic joint="gripper_joint" multiplier="-1"/>
-    <axis xyz="1 0 0"/>
-  </joint>
-
-  <link name="gripper_finger2">
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://cyton_gamma_1500_description/meshes/gripper_finger2.dae"/>
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0.0132 0.0172 0.7254"/>
-      <geometry>
-        <box size="0.015 0.0229 0.0475"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <mass value="1.0"/>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx=".0027" iyy=".0027" izz=".0027"
-                ixy="0" ixz="0" iyz="0"/>
-    </inertial>
-  </link>
-
-  <transmission name="tran9">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="gripper_joint2">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="motor9">
-      <hardwareInterface>PositionJointInterface</hardwareInterface>
-    </actuator>
-  </transmission>
 
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>

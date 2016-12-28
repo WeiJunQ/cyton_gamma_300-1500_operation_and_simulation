@@ -22,6 +22,7 @@ planner_configs:
   PRMstarkConfigDefault:
     type: geometric::PRMstar
 manipulator_planning_group:
+  default_planner_config: RRTConnectkConfigDefault
   planner_configs:
     - SBLkConfigDefault
     - ESTkConfigDefault
@@ -34,18 +35,19 @@ manipulator_planning_group:
     - TRRTkConfigDefault
     - PRMkConfigDefault
     - PRMstarkConfigDefault
-gripper_planning_group:
-  planner_configs:
-    - SBLkConfigDefault
-    - ESTkConfigDefault
-    - LBKPIECEkConfigDefault
-    - BKPIECEkConfigDefault
-    - KPIECEkConfigDefault
-    - RRTkConfigDefault
-    - RRTConnectkConfigDefault
-    - RRTstarkConfigDefault
-    - TRRTkConfigDefault
-    - PRMkConfigDefault
-    - PRMstarkConfigDefault
-  projection_evaluator: joints(gripper_joint,gripper_joint2)
+# gripper_planning_group:
+#  default_planner_config: RRTConnectkConfigDefault
+#  planner_configs:
+#    - SBLkConfigDefault
+#    - ESTkConfigDefault
+#    - LBKPIECEkConfigDefault
+#    - BKPIECEkConfigDefault
+#    - KPIECEkConfigDefault
+#    - RRTkConfigDefault
+#    - RRTConnectkConfigDefault
+#    - RRTstarkConfigDefault
+#    - TRRTkConfigDefault
+#    - PRMkConfigDefault
+#    - PRMstarkConfigDefault
+# projection_evaluator: joints(gripper_joint,gripper_joint2)
   longest_valid_segment_fraction: 0.05

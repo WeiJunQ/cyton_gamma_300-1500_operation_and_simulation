@@ -1,1 +1,0 @@
-this controller.yaml is for control of hardware. When in use, the data should be relayed back to rviz or gazebo and the gazebo controller managers are not required. 

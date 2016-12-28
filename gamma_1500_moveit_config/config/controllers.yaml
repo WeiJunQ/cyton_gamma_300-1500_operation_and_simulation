@@ -3,7 +3,6 @@ controller_list:
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     joints:
-      - base_joint
       - shoulder_roll_joint
       - shoulder_pitch_joint
       - shoulder_yaw_joint
@@ -11,8 +10,5 @@ controller_list:
       - elbow_yaw_joint
       - wrist_pitch_joint
       - wrist_roll_joint
-  - name: andras_gripper_planning_group_controller
-    action_ns: follow_joint_trajectory
-    type: FollowJointTrajectory
-    joints:
       - gripper_joint
+

@@ -8,6 +8,3 @@ controller_list:
       - elbow_yaw_joint
       - wrist_pitch_joint
       - wrist_roll_joint
-  - name: fake_gripper_planning_group_controller
-    joints:
-      - gripper_joint

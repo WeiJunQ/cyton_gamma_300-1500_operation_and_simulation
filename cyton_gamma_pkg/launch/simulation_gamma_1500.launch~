@@ -1,9 +1,7 @@
 <launch>
 
   <include file="$(find cyton_gamma_pkg)/launch/gamma_1500_gaz.launch"/>
-  <include file="$(find cyton_gamma_1500_setupassistant_andras2)/launch/move_group.launch"/>
-  <include file="$(find cyton_gamma_1500_setupassistant_andras2)/launch/moveit_rviz.launch">
-    <arg name="config" value="True"/>
-  </include>
+  <include file="$(find gamma_1500_moveit_config)/launch/move_group.launch"/>
+
 
 </launch>

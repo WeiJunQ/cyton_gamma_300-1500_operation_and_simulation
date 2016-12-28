@@ -26,7 +26,7 @@
     <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch" />
   </group>
 
-  <!-- run the "real robot" interface nodes, this is done by prior opened things -->
+  <!-- run the "real robot" interface nodes -->
   <!--   - this typically includes: robot_state, motion_interface, and joint_trajectory_action nodes -->
   <!--   - replace these calls with appropriate robot-specific calls or launch files -->
 <!--  <group unless="$(arg sim)">
@@ -44,6 +44,7 @@
     <arg name="publish_monitored_planning_scene" value="true" />
   </include>
 
+<!-- Steve TODO, change to custom rviz interface command center-->
   <include file="$(find gamma_1500_moveit_config)/launch/moveit_rviz.launch">
     <arg name="config" value="true"/>
   </include>
