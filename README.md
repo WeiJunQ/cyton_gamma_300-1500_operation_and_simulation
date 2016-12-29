@@ -1,6 +1,4 @@
-# cyton_gamma_simulation
-simulation for cyton gamma 1500 and 300 with MoveIt and OMPL
-
+# cyton_gamma_hardware
 Includes hardware drivers for the dynamixel motors 
 
 Syntax for hardware: 
@@ -14,6 +12,7 @@ Syntax for hardware:
 
 > python command_front_end.py 2>/dev/null
 
+# cyton_gamma_simulation
 Syntax for Simulation: 
 > roslaunch cyton_gamma_pkg simulation_gamma_[1500 or 300].launch 
 
