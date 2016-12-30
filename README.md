@@ -14,6 +14,10 @@ Syntax for hardware:
 
 > python command_front_end.py
 
+OR Use this shell script, though currently not totally stable. In cyton_gamma_pkg/src.
+
+> ./1500_hardware_launch.sh
+
 Syntax for Simulation: 
 > roslaunch cyton_gamma_pkg simulation_gamma_[1500 or 300].launch 
 
