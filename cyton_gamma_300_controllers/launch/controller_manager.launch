@@ -1,9 +1,9 @@
 <!-- -*- mode: XML -*- -->
 
 <launch>
-  <node name="cyton_gamma_300_controller_manager" pkg="dynamixel_controllers" type="controller_manager.py" required="true" output="screen">
+  <node name="cyton_controller_manager" pkg="dynamixel_controllers" type="controller_manager.py" required="true" output="screen">
     <rosparam>
-      namespace: cyton_gamma_300_manager
+      namespace: cyton_manager
       serial_ports:
         port_0:
           port_name: "/dev/ttyUSB0"

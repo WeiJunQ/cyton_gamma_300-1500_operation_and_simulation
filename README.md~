@@ -17,6 +17,7 @@ OR Use this shell script, though currently not totally stable. In cyton_gamma_pk
 > ./1500_hardware_launch.sh
 
 # cyton_gamma_simulation
+>>>>>>> fd17ba36c421f0c0cd674bb3e51f321957dc54fb
 Syntax for Simulation: 
 > roslaunch cyton_gamma_pkg simulation_gamma_[1500 or 300].launch 
 

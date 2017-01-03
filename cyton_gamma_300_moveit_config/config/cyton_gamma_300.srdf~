@@ -19,7 +19,6 @@
         <joint name="elbow_yaw_joint" />
         <joint name="wrist_pitch_joint" />
         <joint name="wrist_roll_joint" />
-        <joint name="gripper_joint" />
     </group>
 
     <group_state name="straightUp_pose" group="manipulator_planning_group">
@@ -27,10 +26,9 @@
         <joint name="elbow_yaw_joint" value="0" />
         <joint name="shoulder_pitch_joint" value="0" />
         <joint name="shoulder_roll_joint" value="0" />
-        <joint name="elow_roll_joint" value="0" />
+        <joint name="elbow_roll_joint" value="0" />
         <joint name="wrist_pitch_joint" value="0" />
         <joint name="wrist_roll_joint" value="0" />
-        <joint name="gripper_joint" value="0" />
     </group_state>
 
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
@@ -42,8 +40,7 @@
     <disable_collisions link1="base_footprint" link2="elbow_pitch" reason="Never" />
     <disable_collisions link1="base_footprint" link2="elbow_roll" reason="Never" />
     <disable_collisions link1="base_footprint" link2="elbow_yaw" reason="Never" />
-    <disable_collisions link1="base_footprint" link2="gripper_finger1" reason="Never" />
-    <disable_collisions link1="base_footprint" link2="gripper_finger2" reason="Never" />
+
     <disable_collisions link1="base_footprint" link2="shoulder_pitch" reason="Never" />
     <disable_collisions link1="base_footprint" link2="shoulder_roll" reason="Never" />
     <disable_collisions link1="base_footprint" link2="virtual_endeffector" reason="Never" />

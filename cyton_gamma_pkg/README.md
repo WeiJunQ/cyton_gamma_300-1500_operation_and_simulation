@@ -17,8 +17,20 @@ The remaining files, _gaz and _rviz support the simulation package. controllers.
 ## cyton_gamma_pkg/src
 Here are the python tests of a trajectory generation program, front-end, and path planning class utilizing OMPL and MoveIt.
 
-> python command_front_end.py 
+> ./1500_hardward_launch.sh 
+
+Will attempt to launch all of the launch scripts for a full launch making it easier on the user. It currently has some bugs resulting in a 50% success rate. 
+
+> python command_front_end.py 2>/dev/null
 
 Will launch the front-end with accompanying OMPL/MoveIt planning backend class in robot_planning_class.py. 
 
+> python feedback_front_end.py 2>/dev/null
+
+Will launch the front-end with feedback information from the robot and E-STOP capabilities.
+
 test_traj.py shows how to fill out the trajectory_msgs JointTrajectory type in python and submit those commands directly to hardware. This allows you to bypass a planning node and is independent of OMPL, requiring only a connection to the hardware. 
+
+## Robot Operations
+For full instructions see SteveMacenski/cyton_gamma_300-1500_operation_and_simulation
+https://github.com/SteveMacenski/cyton_gamma_300-1500_operation_and_simulation
