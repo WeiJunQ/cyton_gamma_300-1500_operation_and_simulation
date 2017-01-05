@@ -10,13 +10,17 @@ Syntax for hardware:
 
 > roslaunch cyton_gamma_[1500 or 300]_moveit_config moveit_planning_execution.launch 2>/dev/null
 
+Then, an optional front-end, either a combined front-end or the separate command and feedback ones.
+
+> python combined_front_end.py 2>/dev/null
+
 > python command_front_end.py 2>/dev/null
 
 > python feedback_front_end.py 2>/dev/null
 
 OR Use this shell script, though currently not totally stable. If you try twice and doesn't work, go back to manual launching. Something in the dynamixel drivers doesn't make this happy. In cyton_gamma_pkg/src.
 
-> ./1500_hardware_launch.sh
+> ./[300-1500]_hardware_launch.sh
 
 ## cyton_gamma_simulation
 Syntax for Simulation: 
