@@ -6,7 +6,7 @@ shoulder_roll_position_controller:
     module: joint_position_controller
     type: JointPositionController
   joint_name: shoulder_roll_joint
-  joint_speed: 5.0
+  joint_speed: 0.1
   motor:
     id: 0
     init: 2037
@@ -19,7 +19,7 @@ shoulder_pitch_position_controller:
     module: joint_position_controller
     type: JointPositionController
   joint_name: shoulder_pitch_joint
-  joint_speed: 5.0
+  joint_speed: 0.1
   motor:
     id: 1
     init: 2067
@@ -32,7 +32,7 @@ shoulder_yaw_position_controller:
     module: joint_position_controller
     type: JointPositionController
   joint_name: shoulder_yaw_joint
-  joint_speed: 5.0
+  joint_speed: 0.1
   motor:
     id: 2
     init: 2050
@@ -45,7 +45,7 @@ elbow_pitch_position_controller:
     module: joint_position_controller
     type: JointPositionController
   joint_name: elbow_pitch_joint
-  joint_speed: 5.0
+  joint_speed: 0.1
   motor:
     id: 3
     init: 2070
@@ -58,7 +58,7 @@ elbow_yaw_position_controller:
     module: joint_position_controller
     type: JointPositionController
   joint_name: elbow_yaw_joint
-  joint_speed: 5.0
+  joint_speed: 0.1
   motor:
     id: 4
     init: 2037
@@ -71,7 +71,7 @@ wrist_pitch_position_controller:
     module: joint_position_controller
     type: JointPositionController
   joint_name: wrist_pitch_joint
-  joint_speed: 5.0
+  joint_speed: 0.1
   motor:
     id: 5
     init: 2050
@@ -84,7 +84,7 @@ wrist_roll_position_controller:
     module: joint_position_controller
     type: JointPositionController
   joint_name: wrist_roll_joint
-  joint_speed: 5.0
+  joint_speed: 0.1
   motor:
     id: 6
     init: 2040
@@ -97,6 +97,6 @@ cyton_joint_trajectory_action_controller:
     module: joint_trajectory_action_controller
     type: JointTrajectoryActionController
   joint_trajectory_action_node:
-    min_velocity: 0.25
+    min_velocity: 0.1
     constraints:
       goal_time: 1.0

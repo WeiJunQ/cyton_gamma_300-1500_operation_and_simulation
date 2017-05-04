@@ -8,5 +8,6 @@ cyton_joint_trajectory_action_controller:
     - elbow_yaw_joint
     - wrist_pitch_joint
     - wrist_roll_joint
+    - gripper_joint
 
 

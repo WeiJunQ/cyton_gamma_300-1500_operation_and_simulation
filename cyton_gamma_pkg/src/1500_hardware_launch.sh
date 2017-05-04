@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source /opt/ros/indigo/setup.bash
-source /home/rdtintern/catkin_ws/devel/setup.bash
+source /opt/ros/kinetic/setup.bash
+source /home/qiu/catkin_ws/devel/setup.bash
 
 echo "[1/6] start controller manager"
 
